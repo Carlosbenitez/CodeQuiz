@@ -3,7 +3,7 @@ Here I made an interactive coding quiz using Javascript, HTML, and CSS. There is
 
 https://carlosbenitez.github.io/CodeQuiz/
 
-![](READMEpictureCodeQuizScreenshot.jpg)
+![](READMEpicture/CodeQuizScreenshot.jpg)
 
 
 Assignment details:
