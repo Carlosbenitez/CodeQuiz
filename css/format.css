@@ -1,6 +1,6 @@
 :root {
-  background-color: #ecf5ff;
-  font-size: 62.5%;
+  background-color: white;
+  font-size: 60%;
 }
 
 * {
@@ -15,12 +15,12 @@ h1,
 h2,
 h3,
 h4 {
+  color: red;
   margin-bottom: 1rem;
 }
 
 h1 {
   font-size: 5.4rem;
-  color: #56a5eb;
   margin-bottom: 5rem;
 }
 
@@ -40,7 +40,8 @@ h3 {
   font-weight: 500;
 }
 
-/* UTILITIES */
+
+
 
 .container {
   width: 100vw;
@@ -79,22 +80,23 @@ h3 {
   display: none;
 }
 
-/* BUTTONS */
+
+
+
 .btn {
   font-size: 1.8rem;
   padding: 1rem 0;
   width: 20rem;
   text-align: center;
-  border: 0.1rem solid #56a5eb;
+  border: 0.1rem solid red;
   margin-bottom: 1rem;
   text-decoration: none;
-  color: #56a5eb;
+  color: red;
   background-color: white;
 }
 
 .btn:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
   transform: translateY(-0.1rem);
   transition: transform 150ms;
 }
@@ -105,7 +107,10 @@ h3 {
   transform: none;
 }
 
-/* FORMS */
+
+
+
+
 form {
   width: 100%;
   display: flex;
@@ -119,7 +124,6 @@ input {
   padding: 1.5rem;
   font-size: 1.8rem;
   border: none;
-  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
 }
 
 input::placeholder {
