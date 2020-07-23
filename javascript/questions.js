@@ -56,6 +56,7 @@ let questions = [
     },
 ];
 
+
 const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 5;
 
@@ -66,6 +67,8 @@ startGame = () => {
     getNewQuestion();
 };
 
+
+//function to get new question
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
@@ -90,6 +93,8 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
+
+//for when selecting answers
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         if (!acceptingAnswers) return;
@@ -107,12 +112,14 @@ choices.forEach(choice => {
 
         selectedChoice.parentElement.classList.add(classToApply);
 
+
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
         }, 1000);
     });
 });
+
 
 incrementScore = num => {
     score += num;
