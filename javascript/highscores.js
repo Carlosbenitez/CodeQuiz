@@ -1,6 +1,6 @@
-const highScoresList = document.getElementById("highScoresList");
+const scoresList = document.getElementById("highScoresList");
 
-highScoresList.innerHTML = highScores
+scoresList.innerHTML = highScores
   .map(score => {
     return `<li class="high-score">${score.name} - ${score.score}</li>`;
   })

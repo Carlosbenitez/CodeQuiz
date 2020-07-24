@@ -1,9 +1,9 @@
 //constant variables
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-const progressText = document.getElementById("progressText");
-const scoreText = document.getElementById("score");
-const progressBarFull = document.getElementById("progressBarFull");
+const progressT = document.getElementById("progressText");
+const scoreT = document.getElementById("score");
+const progressBar = document.getElementById("progressBar");
 
 
 let currentQuestion = {};
@@ -77,9 +77,9 @@ getNewQuestion = () => {
         return window.location.assign("ending.html");
     }
     questionCounter++;
-    progressText.innerText = `Question ${questionCounter}/${maxQuestions}`;
+    progressT.innerText = `Question ${questionCounter}/${maxQuestions}`;
 
-    progressBarFull.style.width = `${(questionCounter / maxQuestions) * 100}%`;
+    progressBar.style.width = `${(questionCounter / maxQuestions) * 100}%`;
 
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
@@ -124,7 +124,7 @@ choices.forEach(choice => {
 
 incrementScore = num => {
     score += num;
-    scoreText.innerText = score;
+    scoreT.innerText = score;
 };
 
 startGame();
