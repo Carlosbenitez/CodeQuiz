@@ -13,6 +13,7 @@ let questionCounter = 0;
 let availableQuesions = [];
 
 //all the questions
+//worked with study group for these questions
 let questions = [
     {
         question: "What tag starts a paragraph of text in HTML?",
@@ -57,8 +58,8 @@ let questions = [
 ];
 
 
-const CORRECT_BONUS = 1;
-const MAX_QUESTIONS = 5;
+const right = 1;
+const maxQuestions = 5;
 
 startGame = () => {
     questionCounter = 0;
@@ -70,15 +71,15 @@ startGame = () => {
 
 //function to get new question
 getNewQuestion = () => {
-    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    if (availableQuesions.length === 0 || questionCounter >= maxQuestions) {
         localStorage.setItem("mostRecentScore", score);
 
         return window.location.assign("ending.html");
     }
     questionCounter++;
-    progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+    progressText.innerText = `Question ${questionCounter}/${maxQuestions}`;
 
-    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+    progressBarFull.style.width = `${(questionCounter / maxQuestions) * 100}%`;
 
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
@@ -104,10 +105,10 @@ choices.forEach(choice => {
         const selectedAnswer = selectedChoice.dataset["number"];
 
         const classToApply =
-            selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+            selectedAnswer == currentQuestion.answer ? "right" : "wrong";
 
-        if (classToApply === "correct") {
-            incrementScore(CORRECT_BONUS);
+        if (classToApply === "right") {
+            incrementScore(right);
         }
 
         selectedChoice.parentElement.classList.add(classToApply);

@@ -1,3 +1,4 @@
+/* choice formatting */
 .choice-container {
   display: flex;
   margin-bottom: 0.5rem;
@@ -15,7 +16,7 @@
 
 .choice-prefix {
   padding: 1.5rem 2.5rem;
-  background-color: red;
+  background-color: orange;
   color: white;
 }
 
@@ -24,43 +25,45 @@
   width: 100%;
 }
 
-.correct {
-  background-color: #28a745;
+.right {
+  background-color: green;
 }
 
-.incorrect {
-  background-color: #dc3545;
+.wrong {
+  background-color: red;
 }
 
 
 
 
-
+/* hud formatting */
 #hud {
   display: flex;
   justify-content: space-between;
 }
 
 .hud-prefix {
-  color: red;
+  color: orange;
   text-align: center;
   font-size: 2rem;
 }
 
 .hud-main-text {
-  color: red;
+  color: orange;
   text-align: center;
 }
 
+
+/* progressBar formatting */
 #progressBar {
   width: 20rem;
   height: 4rem;
-  border: 0.3rem solid red;
+  border: 0.3rem solid orange;
   margin-top: 1.5rem;
 }
 
 #progressBarFull {
   height: 3.4rem;
-  background-color: red;
+  background-color: orange;
   width: 0%;
 }

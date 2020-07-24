@@ -1,5 +1,7 @@
 Coding Quiz
-Here I made an interactive coding quiz using Javascript, HTML, and CSS. There is a random question generator that takes from a set of questions that I wrote in the questions.js. The code records your score and can put it in a highscores list.
+Here I made an interactive coding quiz using Javascript, HTML, and CSS. There is a random question generator that takes from a set of questions that I wrote in the questions.js. The code records your score and can put it in a highscores list. 
+
+In order to build this website I heavily followed this youtube video: https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=2
 
 https://carlosbenitez.github.io/CodeQuiz/
 
